@@ -18,6 +18,36 @@ body {
 }
 
 /* NAVBAR */
+@media (max-width: 600px) {
+  .navbar  .menu-checkbox {
+  display: none;
+}
+
+  .menu-checkbox:checked ~ nav {
+  display: block;
+}
+
+.navbar {
+  position: absolute;
+  background-color: #93B7BE;
+  top: 0px;
+  left: 30px
+}
+
+header {
+  position: relative;
+}
+
+.navbar a {
+  display: block;
+  color: #2D3047;
+  padding: 10px 20px;;
+}
+}
+
+
+
+@media (min-width: 600px) {
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -65,6 +95,7 @@ body {
   padding: 0.5rem 40rem;
   height: 86px;
   width: auto;
+}
 }
 
 /* BANNER */
@@ -305,8 +336,8 @@ footer {
 
 /* PRODUCT DETAILS */
 .product-details {
-  padding: 2rem;
-  max-width: 90%;
+  padding: 3rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -319,20 +350,24 @@ footer {
 
 .product-info {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-wrap: nowrap; /* CRITICAL FIX 1: Prevent wrapping unless explicitly desired (e.g., in a small media query) */
 }
 
 .main-image {
-  width: 45%;
+  /* CRITICAL FIX 2: Set a non-growing/non-shrinking fixed basis for the image */
+  flex: 0 0 40%;
+  max-width: 40%; /* Ensure it doesn't exceed 40% */
+  height: auto;
   object-fit: cover;
   border: 2px solid #2D3047;
-  padding: 0.5rem;
+  padding: 0rem;
 }
 
 .details {
-  flex: 1;
-  width: 45%;
+  /* CRITICAL FIX 3: Let the details panel take up all the remaining space */
+  flex: 1; 
+  /* REMOVED: width: 45%; which caused the overflow/stacking */
+  flex-direction: column;
 }
 
 .details h2 {
@@ -341,10 +376,8 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-.price {
+.product-details .price {
   font-size: 36px;
-  color: #2D3047;
-  text-decoration: none;
   margin-bottom: 1rem;
 }
 
@@ -688,7 +721,7 @@ footer {
   font-size: 28px;
 }
 
-.price {
+.checkout price {
   font-size: 1.5rem;
   color: #D9D9D9;
   align-self: flex-end;

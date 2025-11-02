@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RainyDays | Checkout</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://kit.fontawesome.com/6381acfa92.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="checkout-logo">
+         <img src="images/logo.png" alt="RainyDays logo">
+      </div>
+    </nav>
+  </header>
+
+  <section class="checkout">
+    <a href="cart.html" class="back-link">&lt; BACK</a>
+    <h2>CHECKOUT</h2>
+
+    <div class="checkout-container">
+      <div class="checkout-form">
+        <h3>ADDRESS DETAILS</h3>
+        <input type="text" placeholder="NAME*">
+        <input type="text" placeholder="STREET & NUMBER*">
+        <div class="form-row">
+          <input type="text" placeholder="ZIP CODE*">
+          <input type="text" placeholder="CITY*">
+        </div>
+        <button class="btn confirm">CONFIRM</button>
+
+        <div class="payment-methods">
+          <button class="btn method">VIPPS</button>
+          <button class="btn method">KLARNA</button>
+          <button class="btn method active">CREDIT CARD</button>
+        </div>
+
+        <div class="card-details">
+            <h3> PAYMENT DETAILS</h3>
+          <input type="text" placeholder="CARDHOLDER'S NAME*">
+          <input type="text" placeholder="CARD NUMBER*">
+          <div class="form-row">
+            <input type="text" placeholder="EXPIRATION DATE*">
+            <input type="text" placeholder="CVV*">
+          </div>
+          <button class="btn confirm">CONFIRM</button>
+        </div>
+      </div>
+
+<div class="order-summary">
+  <div class="product-overview">
+    <img src="images/JacketV1.jpg" alt="Jacket V1">
+    <div class="product-info">
+      <h2>JACKET V1</h2>
+      <div class="details">
+        <p>SIZE:</p>
+        <span>M</span>
+      </div>
+      <div class="details">
+        <p>QUANTITY:</p>
+        <span>1</span>
+      </div>
+      <h2 class="price">1999,-</h2>
+    </div>
+  </div>
+  
+  <div class="shipping">
+    <div class="left-group">
+      <i class="fa-solid fa-box"></i>
+      <p>HOME DELIVERY</p>
+    </div>
+    <p>99,-</p>
+  </div>
+
+  <div class="total">
+    <div class="left-group">
+      <i class="fa-solid fa-dollar-sign"></i>
+      <p>TOTAL</p>
+    </div>
+    <p>2098,-</p>
+  </div>
+
+  <button class="btn place">PLACE ORDER</button>
+</div>
+    <div class="checkout-footer">
+        <ul>
+        <li>Shipping Policy</li>
+        <li>Terms of Service</li>
+        <li> Refund Policy</li>
+        </ul>
+    </div>
+</body>
+</html>

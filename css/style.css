@@ -306,7 +306,7 @@ footer {
 /* PRODUCT DETAILS */
 .product-details {
   padding: 2rem;
-  max-width: 1100px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -332,6 +332,7 @@ footer {
 
 .details {
   flex: 1;
+  width: 45%;
 }
 
 .details h2 {
@@ -342,6 +343,8 @@ footer {
 
 .price {
   font-size: 36px;
+  color: #2D3047;
+  text-decoration: none;
   margin-bottom: 1rem;
 }
 

@@ -86,6 +86,9 @@ body {
   .mobile-nav {
     display: none;
   }
+  .navbar {
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {

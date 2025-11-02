@@ -19,6 +19,85 @@ body {
 
 /* NAVIGATION */
 
+/* MOBILE NAVIGATION */
+.mobile-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #93B7BE;
+  padding: 1rem 1.5rem;
+  position: relative;
+}
+
+/* Icons */
+.cart-icon i,
+.hamburger i {
+  font-size: 1.8rem;
+  color: #2D3047;
+  cursor: pointer;
+}
+
+/* Logo */
+.mobile-logo img {
+  height: 60px;
+  width: auto;
+}
+
+/* Hidden menu (hamburger dropdown) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #2D3047;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.mobile-menu li {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #93B7BE;
+}
+
+.mobile-menu li a {
+  display: block;
+  color: #D9D9D9;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.mobile-menu li a:hover {
+  background-color: #93B7BE;
+  color: #2D3047;
+}
+
+/* Toggle active state */
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Show only on small screens */
+@media (min-width: 769px) {
+  .mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;

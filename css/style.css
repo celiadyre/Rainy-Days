@@ -17,37 +17,8 @@ body {
   color: #2D3047;
 }
 
-/* NAVBAR */
-@media (max-width: 600px) {
-  .navbar  .menu-checkbox {
-  display: none;
-}
+/* NAVIGATION */
 
-  .menu-checkbox:checked ~ nav {
-  display: block;
-}
-
-.navbar {
-  position: absolute;
-  background-color: #93B7BE;
-  top: 0px;
-  left: 30px
-}
-
-header {
-  position: relative;
-}
-
-.navbar a {
-  display: block;
-  color: #2D3047;
-  padding: 10px 20px;;
-}
-}
-
-
-
-@media (min-width: 600px) {
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -96,9 +67,19 @@ header {
   height: 86px;
   width: auto;
 }
+
+/*NAVIGATION PHONE?*/
+
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
 }
 
-/* BANNER */
+/* BANNER (HERO) */
 .banner {
   position: relative;
   width: 100%;
@@ -135,7 +116,7 @@ header {
   font-size: 2rem;
 }
 
-/* TERRAIN */
+/* TERRAIN PHOTOS X4 */
 .terrain {
   text-align: center;
   padding: 3rem 2rem;
@@ -154,7 +135,6 @@ header {
   gap: 5.5rem;
   margin: 0;
 }
-
 
 .terrain-item {
   position: relative;
@@ -185,17 +165,15 @@ footer {
   text-align: center;
 }
 
-/* Layout of the three columns */
 .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   max-width: 90%;
   margin: 0 auto;
-  flex-wrap: wrap; /* allows it to stack on smaller screens */
+  flex-wrap: wrap;
 }
 
-/* Contact and FAQ sections */
 .contact,
 .faq {
   flex: 0;
@@ -208,7 +186,7 @@ footer {
   font-size: 1.2rem;
   margin-bottom: 1rem;
   letter-spacing: 1px;
-  color: #2D3047; /* accent color */
+  color: #2D3047;
 }
 
 .contact p {
@@ -217,7 +195,6 @@ footer {
   color: #2D3047;
 }
 
-/* Footer logo in the middle */
 .footer-logo {
   flex: 1;
   text-align: center;
@@ -229,7 +206,6 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-/* FAQ list */
 .faq ul {
   list-style: none;
   padding: 0;
@@ -247,7 +223,6 @@ footer {
   color: #d0c23d;
 }
 
-/* Social icons below */
 .socials {
   margin-top: 2rem;
   display: flex;
@@ -266,7 +241,6 @@ footer {
   color: #d0c23d;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
@@ -281,8 +255,7 @@ footer {
   }
 }
 
-
-/* PRODUCTS PAGE */
+/* PRODUCT PAGE */
 .products-section {
   padding: 3.75rem;
   font-size: 35;
@@ -325,7 +298,6 @@ footer {
   opacity: 0;
 }
 
-/* Hover effect */
 .product-card:hover img {
   filter: brightness(80%);
 }
@@ -348,26 +320,22 @@ footer {
   margin-bottom: 1rem;
 }
 
-.product-info {
+.product-details .product-info {
   display: flex;
-  flex-wrap: nowrap; /* CRITICAL FIX 1: Prevent wrapping unless explicitly desired (e.g., in a small media query) */
+  flex-wrap: nowrap;
 }
 
 .main-image {
-  /* CRITICAL FIX 2: Set a non-growing/non-shrinking fixed basis for the image */
-  flex: 0 0 40%;
-  max-width: 40%; /* Ensure it doesn't exceed 40% */
-  height: auto;
+  width: 35%;
   object-fit: cover;
   border: 2px solid #2D3047;
   padding: 0rem;
 }
 
 .details {
-  /* CRITICAL FIX 3: Let the details panel take up all the remaining space */
   flex: 1; 
-  /* REMOVED: width: 45%; which caused the overflow/stacking */
   flex-direction: column;
+  padding: 2rem;
 }
 
 .details h2 {
@@ -407,16 +375,16 @@ footer {
 }
 
 .buttons {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .btn.buy {
   position: absolute;
   background-color: #E0CA3C;
-  width: 692px;
+  width: 55%;
   font-size: 28px;
   text-align: center;
-  margin-bottom: 1rem;
 }
 
 .btn.add {
@@ -424,7 +392,7 @@ footer {
   background-color: #2D3047;
   font-size: 28px;
   text-align: center;
-  width: 692px;
+  width: 55%;
   color: #fff;
 }
 
@@ -446,7 +414,7 @@ footer {
 }
 
 .cart h2 {
-  font-size: 35px; /* added px */
+  font-size: 35px;
   text-align: center;
   color: #2D3047;
   margin-bottom: 1rem;
@@ -470,8 +438,8 @@ footer {
 .cart-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* ensures top alignment */
-  flex-wrap: nowrap; /* ✅ prevents summary from dropping below */
+  align-items: flex-start;
+  flex-wrap: nowrap;
   gap: 2rem;
 }
 
@@ -494,25 +462,22 @@ footer {
   justify-content: flex-start;
 }
 
-/* general paragraph styling in cart details */
 .cart-item p {
   font-size: 28px;
   color: #2D3047;
   margin-bottom: 0.3rem;
 }
 
-/* SIZE + QUANTITY blocks */
 .cart-item .size,
 .cart-item .quantity {
   display: flex;
-  flex-direction: column; /* stack text above box */
+  flex-direction: column;
   align-items: flex-start;
   font-size: 28px;
   color: #2D3047;
   margin-bottom: 0.8rem;
 }
 
-/* box styles */
 .cart-item .size span,
 .cart-item .quantity select {
   display: flex;
@@ -525,7 +490,6 @@ footer {
   padding-left: 1.3rem;
 }
 
-/* quantity icon (trash or similar) */
 .cart-item .quantity i {
   font-size: 24px;
   cursor: pointer;
@@ -537,7 +501,6 @@ footer {
   color: #E0CA3C;
 }
 
-/* right-side cart summary box */
 .cart-summary {
   background-color: #2D3047;
   color: #D9D9D9;
@@ -558,7 +521,7 @@ footer {
 
 .cart-summary input::placeholder {
   color: #93B7BE;
-  font-size: 20px; /* fixed missing unit */
+  font-size: 20px;
 }
 
 .cart-summary .btn.proceed {
@@ -583,8 +546,6 @@ footer {
   margin-top: 1rem;
 }
 
-
-
 /* CHECKOUT PAGE */
 .checkout {
   padding: 3rem;
@@ -593,7 +554,7 @@ footer {
 }
 
 .checkout h2 {
-  font-size: 35px; /* added px */
+  font-size: 35px;
   text-align: center;
   color: #2D3047;
   margin-bottom: 1rem;
@@ -614,7 +575,7 @@ footer {
 
 .checkout-form {
   background-color: #2D3047;
-  width: 35%;
+  width: 36%;
 }
 
 .checkout-form input {
@@ -651,12 +612,12 @@ footer {
   background-color: #93B7BE;
   color: #2D3047;
   padding: 0.5rem 1.5rem;
-  border: none;
 }
 
 .payment-methods .btn.method.active {
   background-color: #2D3047;
   color: #93B7BE;
+  padding: 0.5rem 1.5rem;
   border: 1px solid #93B7BE
 }
 
@@ -683,35 +644,33 @@ footer {
 .product-overview {
   display: flex;
   align-items: flex-start;
-  gap: 1.5rem;
+  gap: 1rem;
   border-bottom: 1px solid #D9D9D9;
-  padding-bottom: 5rem;
+  padding-bottom: 0;
 }
 
 .order-summary img {
-  width: 30%;
+  width: 40%;
   height: auto;
   border: 2px solid #D9D9D9;
   object-fit: cover;
 }
 
-.product-info {
+.product-information {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 0.6rem;
 }
 
-.product-info .details {
+.product-information .details {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 0.5rem;
   font-size: 28px;
 }
 
-.product-info .details span {
+.product-information .details span {
   background-color: #93B7BE;
   color: #2D3047;
   height: 2.75rem;
@@ -721,9 +680,10 @@ footer {
   font-size: 28px;
 }
 
-.checkout price {
+.checkout .price {
   font-size: 1.5rem;
   color: #D9D9D9;
+  font-size: 28px;
   align-self: flex-end;
   text-decoration: underline;
 }
@@ -731,7 +691,7 @@ footer {
 .left-group {
   display: flex;
   align-items: center;
-  gap: 1rem; /* space between icon and text */
+  gap: 1rem;
 }
 
 .shipping, .total {

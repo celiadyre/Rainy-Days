@@ -84,10 +84,10 @@ body {
 /* Show only on small screens */
 @media (min-width: 769px) {
   .mobile-nav {
-    display: none;
+    display: none !important;
   }
   .navbar {
-    display: flex;
+    display: flex !important;
   }
 }
 

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+<script type="module" src="js/cart.js"></script>
 </head>
 
 <body>
@@ -58,77 +59,20 @@
 
   <div class="cart-container">
     <!-- LEFT SIDE: Product -->
-    <div class="cart-item">
-      <img src="images/JacketV1.jpg" alt="Jacket V1">
-      <div class="cart-details">
-        <h3>JACKET V1</h3>
-        <h2>1999,-</h2>
-
-        <div class="size">
-          <p>SIZE:</p>
-          <span>M</span>
-        </div>
-
-        <div class="quantity">
-          <label>QUANTITY:</label>
-          <div class="quantity-controls">
-            <input type="number" value="1" min="1">
-            <i class="fa-solid fa-trash"></i>
-          </div>
-        </div>
-      </div>
-    </div>
+    <div class="cart-items" id="cartItems"></div>
 
     <!-- RIGHT SIDE: Summary -->
     <div class="cart-summary">
       <h3>DETAILS</h3>
       <label>DISCOUNT CODE:</label>
       <input type="text" placeholder="TYPE HERE...">
-      <label>EMAIL*:</label>
+      <label>EMAIL:</label>
       <input type="email" placeholder="TYPE HERE...">
-      <p class="total">TOTAL: 1999,-</p>
+      <p class="total" id="cartTotal">TOTAL: 0,-</p>
       <a href="checkout.html" class="btn proceed">PROCEED TO CHECKOUT</a>
     </div>
   </div>
 </section>
-
-  <section class="related">
-     <hr>
-     <br/>
-    <h3>PEOPLE ALSO LIKE:</h3>
-    <div class="products-grid">
-       <div class="product-card">
-        <img src="images/JacketV1.jpg" alt="Jacket V1">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V1</h3>
-        <p>1999,-</p>
-        </div>
-      <div class="product-card">
-        <img src="images/JacketV2.jpg" alt="Jacket V2">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V2</h3>
-        <p>2399,-</p>
-      </div>
-      <div class="product-card">
-        <img src="images/JacketV3.jpg" alt="Jacket V3">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V3</h3>
-        <p>3999,-</p>
-      </div>
-      <div class="product-card">
-        <img src="images/JacketV4.jpg" alt="Jacket V4">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V4</h3>
-        <p>2399,-</p>
-      </div>
-      <div class="product-card">
-        <img src="images/JacketV5.jpg" alt="Jacket V5">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V5</h3>
-        <p>999,-</p>
-      </div>
-    </div>
-  </section>
 
   <footer>
     <div class="footer-content">

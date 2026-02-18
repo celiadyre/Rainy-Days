@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Homenaje&display=swap" rel="stylesheet">
+<script type="module" src="js/product-details.js"></script>
 </head>
 
 <body>
@@ -46,84 +47,54 @@
       </div>
 
       <div class="nav-icons">
-        <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-        <i class="fa-sharp fa-solid fa-cart-shopping" ></i>
-      </div>
+  <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+
+  <a href="cart.html" class="cart-link">
+    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+  </a>
+</div>
+
     </nav>
   </header>
 
   <section class="product-details">
-    <a href="product-page.html" class="back-link">&lt; Back</a>
-    <div class="product-info">
-      <img src="images/JacketV1.jpg" alt="Jacket V1" class="main-image">
-      <div class="details">
-        <h2>JACKET V1</h2>
-        <p class="price">1999,-</p>
+  <a href="product-page.html" class="back-link">&lt; Back</a>
 
-        <div class="size">
-          <p>CHOOSE SIZE:</p>
-          <div class="sizes">
-            <span>S</span><span>M</span><span>L</span><span>XL</span>
-          </div>
-        </div>
+  <div class="product-info">
+    <img src="" alt="" class="main-image" id="productImage">
 
-        <div class="quantity">
-          <p>QUANTITY:</p>
-          <input type="number" value="1" min="1">
-        </div>
+    <div class="details">
+      <h2 id="productTitle"></h2>
 
-        <div class="description">
-          <h4>DESCRIPTION:</h4>
-          <p>Gear up for your next outdoor adventure with Jacket V1 – built for those who demand durability, function, and style in any weather. Whether you're snowmobiling through alpine trails, hiking in wet conditions, or riding in brisk wind, this jacket delivers all-day comfort and protection.</p>
-        </div>
+      <p class="price" id="productPrice"></p>
 
-        <div class="buttons">
-          <a href="cart.html" class="btn buy">BUY NOW</a>
-        </div>
-        <br/>
-        <br/>
-        <div class="buttons">
-        <a class="btn add">ADD TO CART</a>
-        </div>
+      <div class="size">
+        <p>CHOOSE SIZE:</p>
+        <div class="sizes" id="productSizes"></div>
+      </div>
+
+      <div class="quantity">
+        <p>QUANTITY:</p>
+        <input type="number" value="1" min="1">
+      </div>
+
+      <div class="description">
+        <h4>DESCRIPTION:</h4>
+        <p id="productDescription"></p>
+      </div>
+
+      <div class="buttons">
+        <p class="btn buy">BUY NOW</p>
+      </div>
+
+      <br><br>
+
+      <div class="buttons">
+        <i class="btn add" id="addToCartBtn">ADD TO CART</i>
       </div>
     </div>
-  </section>
-
-  <section class="related">
-    <h3>RELATED PRODUCTS:</h3>
-    <div class="products-grid">
-       <div class="product-card">
-        <img src="images/JacketV1.jpg" alt="Jacket V1">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V1</h3>
-        <p>1999,-</p>
-        </div>
-      <div class="product-card">
-        <img src="images/JacketV2.jpg" alt="Jacket V2">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V2</h3>
-        <p>2399,-</p>
-      </div>
-      <div class="product-card">
-        <img src="images/JacketV3.jpg" alt="Jacket V3">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V3</h3>
-        <p>3999,-</p>
-      </div>
-      <div class="product-card">
-        <img src="images/JacketV4.jpg" alt="Jacket V4">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V4</h3>
-        <p>2399,-</p>
-      </div>
-      <div class="product-card">
-        <img src="images/JacketV5.jpg" alt="Jacket V5">
-        <button class="view-btn">VIEW PRODUCT</button>
-        <h3>JACKET V5</h3>
-        <p>999,-</p>
-      </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <footer>
     <div class="footer-content">

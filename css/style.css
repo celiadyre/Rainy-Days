@@ -297,6 +297,12 @@ footer {
   opacity: 1;
 }
 
+.old-price {
+  text-decoration: line-through;
+  color: red;
+  margin-right: 5px;
+}
+
 /* MOBILE VERSION */
 @media (max-width: 768px) {
   .products-section {
@@ -378,6 +384,12 @@ footer {
   margin-top: 0.25rem;
   margin-bottom: 1rem;
 }
+
+.size .sizes span.active {
+  background-color: #2D3047;
+  color: #fff;
+}
+
 
 .quantity input {
   height: 3rem;
@@ -463,7 +475,7 @@ footer {
 .cart-item {
   display: flex;
   gap: 1rem;
-  width: 65%;
+  width: 90%;
 }
 
 .cart-item img {
@@ -643,7 +655,6 @@ footer {
   color: #D9D9D9;
   padding: 1.5rem;
   width: 55%;
-  height: 695px;
 }
 
 .order-summary h2 {
@@ -695,6 +706,12 @@ footer {
   text-align: center;
   padding: 0.5rem 0.5rem;
   font-size: 28px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .checkout .price {
@@ -821,4 +838,88 @@ footer {
   .menu-toggle:checked ~ .mobile-menu {
     display: flex;
   }
+}
+
+/* CONFIRMATION PAGE */
+
+.confirmation {
+  margin: 3rem 5rem;
+}
+
+.confirmation h2 {
+  text-align: center;
+  font-size: 35px;
+  color: #2D3047;
+  margin-bottom: 2rem;
+}
+
+.confirmation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.confirmation-items {
+  width: 60%;
+}
+
+.confirmation-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.confirmation-item img {
+  width: 20rem;
+  object-fit: cover;
+  border: 2px solid #2D3047;
+  padding: 0.5rem;
+}
+
+.confirmation-details h3 {
+  font-size: 28px;
+  text-decoration: underline;
+  color: #2D3047;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-details p {
+  font-size: 22px;
+  color: #2D3047;
+  margin-bottom: 0.3rem;
+}
+
+.confirmation-summary {
+  width: 35%;
+  background-color: #2D3047;
+  color: #D9D9D9;
+  padding: 1.5rem;
+}
+
+.confirmation-summary h3 {
+  text-align: center;
+  color: #93B7BE;
+  margin-bottom: 1rem;
+}
+
+.confirmation-total {
+  display: flex;
+  justify-content: space-between;
+  background-color: #93B7BE;
+  color: #2D3047;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 22px;
+}
+
+.confirmation-return {
+  display: block;
+  background-color: #E0CA3C;
+  color: #2D3047;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  font-size: 22px;
+  text-decoration: none;
 }

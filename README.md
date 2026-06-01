@@ -1,4 +1,4 @@
-Rainy Days - Noroff Y1 Semester Project 1 + JavaScript 1
+Rainy Days - Noroff Cross Course Project + JavaScript 1
     Rainy days is an online store featuring jackets for outdoor use. It is coded as part of my vocational studies at Noroff. The project started as a basic HTML and CSS website, but over time implemented JavaScript for functionality and product listing + filtering.
 
 STACK: 
@@ -11,3 +11,6 @@ Features:
 Bugs/Issues:
     Major styling flaws for mobile users
     Unclickable links in menus
+
+
+- Celia Dyremyhr

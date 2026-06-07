@@ -9,7 +9,7 @@ Features:
     Filtering - product can be filtered by gender and color using API information
 
 Bugs/Issues:
-    Major styling flaws for mobile users
+    Cart icon in menubar doesn't seem to work for mobile users
     Unclickable links in menus
 
 
